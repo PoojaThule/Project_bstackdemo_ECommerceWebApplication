@@ -22,9 +22,15 @@ public class ProductPage {
 	WebElement cartCloseButton;
 	@FindBy(xpath = "//div[@id='1']//p")
 	WebElement firstElementName;
+	@FindBy(xpath = "//div[@id='1']/div[3]/div[1]")
+	WebElement firstElementPrice;
 
 	public String getfirstElementName() {
 		return firstElementName.getText();
+	}
+
+	public String getfirstElementPrice() {
+		return firstElementPrice.getText();
 	}
 
 	public void addItemstoCart(int item) {

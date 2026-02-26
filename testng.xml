@@ -4,7 +4,7 @@
 		<classes>
 			<class name="com.bstackdemo.tests.LoginTest" />
 			<class name="com.bstackdemo.tests.AddToCartTest" />
-			--<class name="com.bstackdemo.tests.CheckoutTest" />
+			<class name="com.bstackdemo.tests.CheckoutTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

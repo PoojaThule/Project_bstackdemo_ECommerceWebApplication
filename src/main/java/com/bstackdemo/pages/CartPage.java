@@ -23,6 +23,8 @@ public class CartPage {
 	WebElement bagQuantity;
 	@FindBy(xpath = "//div[@class='shelf-item__del']")
 	WebElement itemCloseButton;
+	@FindBy(xpath = "//div[text()='Checkout']")
+	WebElement checkout;
 
 	public String getcartPageTitle() {
 		return cartPageTitle.getText();
@@ -39,5 +41,10 @@ public class CartPage {
 			waitutil.waitforElementTobeClickable(itemCloseButton);
 			itemCloseButton.click();
 		}
+	}
+	
+	public void checkout() {
+		waitutil.waitforElementTobeClickable(checkout);
+		checkout.click();
 	}
 }
