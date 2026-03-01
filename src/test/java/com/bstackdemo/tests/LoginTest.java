@@ -12,7 +12,7 @@ public class LoginTest extends BaseTest {
 		loginpage.userLogin("demouser", "testingisfun99");
 		loginpage.logIn();
 		Assert.assertTrue(loginpage.isUserLoggedIn(), "Test Case Fail as Logout button is not displayed.");
-		System.out.println("Test Case Pass");
+		logger.info("TC_001 is passed as user logged in with valid credentials");
 	}
 
 	// TC_002: Login with invalid credentials
@@ -22,7 +22,7 @@ public class LoginTest extends BaseTest {
 		loginpage.userLogin("locked_user", "testingisfun99");
 		loginpage.logIn();
 		Assert.assertEquals(loginpage.getErrorMessage(), "Your account has been locked.", "Test Failed");
-		System.out.println("Test Case Pass");
+		logger.info("TC_002 is passed as user login failed");
 
 	}
 
@@ -32,7 +32,7 @@ public class LoginTest extends BaseTest {
 		loginpage.signIn();
 		loginpage.logIn();
 		Assert.assertEquals(loginpage.getErrorMessage(), "Invalid Username", "Test Failed");
-		System.out.println("Test Case Pass");
+		logger.info("TC_003 is passed as user is not able to login with empty data");
 
 	}
 

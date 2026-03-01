@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.bstackdemo.tests.CheckoutTest">
+      <class name="com.bstackdemo.tests.AddToCartTest">
         <methods>
+          <include name="TC_006_removeItemFromCart"/>
           <include name="initDriver"/>
-          <include name="TC_007_placeOrderWithValidDetails"/>
         </methods>
-      </class> <!-- com.bstackdemo.tests.CheckoutTest -->
+      </class> <!-- com.bstackdemo.tests.AddToCartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

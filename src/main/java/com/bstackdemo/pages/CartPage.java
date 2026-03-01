@@ -1,5 +1,6 @@
 package com.bstackdemo.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,31 +21,48 @@ public class CartPage {
 	@FindBy(xpath = "//p[@class='title']")
 	WebElement cartPageTitle;
 	@FindBy(xpath = "//span[@class='bag__quantity']")
-	WebElement bagQuantity;
+	WebElement cartBagQuantity;
 	@FindBy(xpath = "//div[@class='shelf-item__del']")
 	WebElement itemCloseButton;
 	@FindBy(xpath = "//div[text()='Checkout']")
 	WebElement checkout;
+	@FindBy(xpath = "//p[text()='Add some products in the bag ']")
+	WebElement emptyCartText;
 
 	public String getcartPageTitle() {
 		return cartPageTitle.getText();
 	}
 
 	public String getBagQuantity() {
-		return bagQuantity.getText();
+		return cartBagQuantity.getText();
+	}
+
+	public void openCart() {
+		waitutil.waitforElementTobeClickable(cartBagQuantity);
+		cartBagQuantity.click();
 	}
 
 	public void removeItemFromCart(int item) {
-		waitutil.waitforElementTobeClickable(bagQuantity);
-		bagQuantity.click();
+		waitutil.waitforElementTobeClickable(cartBagQuantity);
+		cartBagQuantity.click();
 		for (int i = 1; i <= item; i++) {
 			waitutil.waitforElementTobeClickable(itemCloseButton);
 			itemCloseButton.click();
 		}
 	}
-	
+
 	public void checkout() {
 		waitutil.waitforElementTobeClickable(checkout);
 		checkout.click();
 	}
+	
+	public boolean isCheckoutButtonPresent() {
+	    return driver.findElements(By.xpath("//div[text()='Checkout']")).size() > 0;
+	}
+
+	public Boolean getEmptyCartVisibility() {
+		return cartBagQuantity.getText().equals("0") && emptyCartText.getText().contains("Add some products in the bag")
+				&& !isCheckoutButtonPresent();
+	}
+
 }

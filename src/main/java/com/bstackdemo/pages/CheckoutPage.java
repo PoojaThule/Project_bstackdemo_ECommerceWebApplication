@@ -19,19 +19,27 @@ public class CheckoutPage {
 
 	@FindBy(xpath = "//span[@class='cart-priceItem-value']")
 	WebElement itemPriceOnCheckOutPage;
-	@FindBy(id="firstNameInput") WebElement firstName;
-	@FindBy(id="lastNameInput") WebElement lastName;
-	@FindBy(id="addressLine1Input") WebElement addressLine;
-	@FindBy(id="provinceInput") WebElement state;
-	@FindBy(id="postCodeInput") WebElement postCode;
-	@FindBy(xpath="//button[text()='Submit']") WebElement submit;
-	@FindBy(id = "confirmation-message") WebElement confirmationMessage;
-	@FindBy(partialLinkText = "Download order receipt") WebElement orderReceiptLink;
-	
+	@FindBy(id = "firstNameInput")
+	WebElement firstName;
+	@FindBy(id = "lastNameInput")
+	WebElement lastName;
+	@FindBy(id = "addressLine1Input")
+	WebElement addressLine;
+	@FindBy(id = "provinceInput")
+	WebElement state;
+	@FindBy(id = "postCodeInput")
+	WebElement postCode;
+	@FindBy(xpath = "//button[text()='Submit']")
+	WebElement submit;
+	@FindBy(id = "confirmation-message")
+	WebElement confirmationMessage;
+	@FindBy(partialLinkText = "Download order receipt")
+	WebElement orderReceiptLink;
+
 	public String getItemPriceOnCheckOutPage() {
 		return itemPriceOnCheckOutPage.getText();
 	}
-	
+
 	public void buyerInfo(String fname, String lname, String address, String st, String code) {
 		firstName.sendKeys(fname);
 		lastName.sendKeys(lname);
@@ -40,7 +48,7 @@ public class CheckoutPage {
 		postCode.sendKeys(code);
 		submit.click();
 	}
-	
+
 	public String getConfirmationMessage() {
 		waitutil.waitforElementVisibility(orderReceiptLink);
 		return confirmationMessage.getText();

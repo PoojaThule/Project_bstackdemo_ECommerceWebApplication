@@ -1,0 +1,7 @@
+com\bstackdemo\pages\CheckoutPage.class
+com\bstackdemo\utilis\WaitUtils.class
+com\bstackdemo\utilis\ExtentReport.class
+com\bstackdemo\pages\CartPage.class
+com\bstackdemo\pages\LoginPage.class
+com\bstackdemo\pages\ProductPage.class
+com\bstackdemo\utilis\WebDriverFactory.class

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite">
-	<test thread-count="5" name="Test">
+<suite name="Suite" parallel="false">
+	<listeners>
+		<listener class-name="com.bstackdemo.utilis.TestListener" />
+	</listeners>
+	<test name="Test">
 		<classes>
 			<class name="com.bstackdemo.tests.LoginTest" />
 			<class name="com.bstackdemo.tests.AddToCartTest" />

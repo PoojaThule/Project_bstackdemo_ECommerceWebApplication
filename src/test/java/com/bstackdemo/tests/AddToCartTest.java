@@ -9,7 +9,7 @@ public class AddToCartTest extends BaseTest {
 	public void TC_004_addSingleItemToCart() {
 		productpage.addItemstoCart(1);
 		Assert.assertEquals(productpage.getfirstElementName(), cartpage.getcartPageTitle());
-		System.out.println("Test Case Pass");
+		logger.info("TC_004 is passed as Item added in the cart");
 	}
 
 	// TC_005: Add multiple items to cart and verify cart count
@@ -17,7 +17,7 @@ public class AddToCartTest extends BaseTest {
 	public void TC_005_addMultipleItemToCart() {
 		productpage.addItemstoCart(4);
 		Assert.assertEquals(cartpage.getBagQuantity(), "4");
-		System.out.println("Test Case Pass");
+		logger.info("TC_005 is passed as multiple items are added into the cart");
 	}
 
 	// TC_006: Remove item from cart
@@ -27,6 +27,6 @@ public class AddToCartTest extends BaseTest {
 		productpage.addItemstoCart(items);
 		cartpage.removeItemFromCart(items);
 		Assert.assertEquals(cartpage.getBagQuantity(), "0");
-		System.out.println("Test case pass");
+		logger.info("TC_006 is passed as items are removed from the cart"); 
 	}
 }

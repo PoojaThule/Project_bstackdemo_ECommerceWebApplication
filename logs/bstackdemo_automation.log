@@ -1,0 +1,24 @@
+[2026-03-01 23:02:06] [main] INFO  com.bstackdemo.tests.BaseTest - Browser is launching
+[2026-03-01 23:02:13] [main] INFO  com.bstackdemo.tests.BaseTest - TC_001 is passed as user logged in with valid credentials
+[2026-03-01 23:02:13] [main] INFO  com.bstackdemo.tests.BaseTest - Driver is closing as Test case is completed
+[2026-03-01 23:02:14] [main] INFO  com.bstackdemo.tests.BaseTest - Browser is launching
+[2026-03-01 23:02:22] [main] INFO  com.bstackdemo.tests.BaseTest - TC_002 is passed as user login failed
+[2026-03-01 23:02:23] [main] INFO  com.bstackdemo.tests.BaseTest - Driver is closing as Test case is completed
+[2026-03-01 23:02:24] [main] INFO  com.bstackdemo.tests.BaseTest - Browser is launching
+[2026-03-01 23:02:34] [main] INFO  com.bstackdemo.tests.BaseTest - TC_003 is passed as user is not able to login with empty data
+[2026-03-01 23:02:35] [main] INFO  com.bstackdemo.tests.BaseTest - Driver is closing as Test case is completed
+[2026-03-01 23:02:37] [main] INFO  com.bstackdemo.tests.BaseTest - Browser is launching
+[2026-03-01 23:02:46] [main] INFO  com.bstackdemo.tests.BaseTest - TC_004 is passed as Item added in the cart
+[2026-03-01 23:02:46] [main] INFO  com.bstackdemo.tests.BaseTest - Driver is closing as Test case is completed
+[2026-03-01 23:02:47] [main] INFO  com.bstackdemo.tests.BaseTest - Browser is launching
+[2026-03-01 23:02:54] [main] INFO  com.bstackdemo.tests.BaseTest - TC_005 is passed as multiple items are added into the cart
+[2026-03-01 23:02:55] [main] INFO  com.bstackdemo.tests.BaseTest - Driver is closing as Test case is completed
+[2026-03-01 23:02:56] [main] INFO  com.bstackdemo.tests.BaseTest - Browser is launching
+[2026-03-01 23:03:03] [main] INFO  com.bstackdemo.tests.BaseTest - TC_006 is passed as items are removed from the cart
+[2026-03-01 23:03:03] [main] INFO  com.bstackdemo.tests.BaseTest - Driver is closing as Test case is completed
+[2026-03-01 23:03:04] [main] INFO  com.bstackdemo.tests.BaseTest - Browser is launching
+[2026-03-01 23:03:16] [main] INFO  com.bstackdemo.tests.BaseTest - TC_007 is passed as order places successfully
+[2026-03-01 23:03:16] [main] INFO  com.bstackdemo.tests.BaseTest - Driver is closing as Test case is completed
+[2026-03-01 23:03:17] [main] INFO  com.bstackdemo.tests.BaseTest - Browser is launching
+[2026-03-01 23:03:58] [main] INFO  com.bstackdemo.tests.BaseTest - TC_008 Passed: User cannot checkout with empty cart
+[2026-03-01 23:03:59] [main] INFO  com.bstackdemo.tests.BaseTest - Driver is closing as Test case is completed
